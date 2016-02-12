@@ -1,0 +1,870 @@
+@charset "UTF-8";
+/*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
+/* What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team. */
+/* ==========================================================================
+ * Base styles: opinionated defaults
+ * ========================================================================== */
+/* Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design. */
+@import url(http://fonts.googleapis.com/css?family=Cabin|Raleway:900);
+::-moz-selection, ::selection {
+  background: #b3d4fc;
+  text-shadow: none; }
+
+/* A better looking default horizontal rule */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0; }
+
+/* Remove the gap between images, videos, audio and canvas and the bottom of
+ * their containers: h5bp.com/i/440 */
+audio, canvas, img, video {
+  vertical-align: middle; }
+
+/* Remove default fieldset styles. */
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0; }
+
+/* Allow only vertical resizing of textareas. */
+textarea {
+  resize: vertical; }
+
+/* ==========================================================================
+ * Browse Happy prompt
+ * ========================================================================== */
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0; }
+
+/* ==========================================================================
+ * Author's custom styles
+ * ========================================================================== */
+/* Police en Bitmap, pixelis├®, bas├® sur la police des t├®l├®phones Nokia. */
+@font-face {
+  font-family: "Nokia";
+  src: url("../fonts/nokiafc22/nokiafc22-webfont.eot");
+  src: url("../fonts/nokiafc22/nokiafc22-webfont.eot?#iefix") format("embedded-opentype");
+  src: url("../fonts/nokiafc22/nokiafc22-webfont.woff") format("woff");
+  src: url("../fonts/nokiafc22/nokiafc22-webfont.ttf") format("truetype");
+  src: url("../fonts/nokiafc22/nokiafc22-webfont.svg#nokia_cellphone_fcsmall") format("svg"); }
+/* Cabin et Raleway, depuis Google Fonts */
+h1, h2, h3 {
+  display: block;
+  position: relative;
+  font-family: "Cabin", Arial, sans-serif;
+  font-weight: 400;
+  color: #ffffff;
+  text-align: center; }
+
+h1, h3 {
+  letter-spacing: -0.04em; }
+
+h1 {
+  font-size: 30px;
+  margin: 40px 0 0; }
+
+h2 {
+  font-size: 20px;
+  margin: 0; }
+
+h3 {
+  font-size: 16px;
+  margin: 10px 0 30px 0; }
+
+.full-width {
+  display: block;
+  position: relative;
+  width: 100%; }
+
+/* END override-transition() */
+/**
+ * Pour activer la compatibilit├® avec les anciens navigateurs
+ */
+/* ############################# */
+/*            Navbar */
+/* ############################# */
+#MainNavbar {
+  display: block;
+  background: #222;
+  top: 0;
+  left: 0; }
+  #MainNavbar .navbar {
+    margin-bottom: 0;
+    border: none;
+    color: white; }
+    #MainNavbar .navbar .icon-bar {
+      background: #ffffff; }
+    #MainNavbar .navbar .navbar-brand {
+      display: block;
+      position: relative;
+      font-family: "Raleway", sans-serif;
+      font-weight: 900;
+      letter-spacing: -0.04em;
+      margin-left: -15px; }
+      #MainNavbar .navbar .navbar-brand:not(.ie8) {
+        color: #ffffff; }
+      #MainNavbar .navbar .navbar-brand span {
+        font-style: normal; }
+        #MainNavbar .navbar .navbar-brand span.blanc {
+          color: #ffffff; }
+        #MainNavbar .navbar .navbar-brand span.i_1 {
+          color: #ffb9b9; }
+        #MainNavbar .navbar .navbar-brand span.i_2 {
+          color: #c2ffba; }
+        #MainNavbar .navbar .navbar-brand span.i_3 {
+          color: #bad2ff; }
+      #MainNavbar .navbar .navbar-brand:hover:not(.ie8) {
+        color: #ccc; }
+      #MainNavbar .navbar .navbar-brand:hover span.blanc {
+        color: #ccc; }
+      #MainNavbar .navbar .navbar-brand:hover span.i_1 {
+        color: #ff5454; }
+      #MainNavbar .navbar .navbar-brand:hover span.i_2 {
+        color: #68ff54; }
+      #MainNavbar .navbar .navbar-brand:hover span.i_3 {
+        color: #5490ff; }
+  #MainNavbar .navbar-nav > li > a {
+    color: white;
+    line-height: 1;
+    border-bottom: 3px solid transparent; }
+    #MainNavbar .navbar-nav > li > a:hover, #MainNavbar .navbar-nav > li > a:focus {
+      background: none;
+      border-bottom: 3px solid #ff5454; }
+  #MainNavbar .navbar-fixed-top {
+    -webkit-backface-visibility: hidden;
+    bottom: 0; }
+
+/* MAX-width: 767px */
+/* MIN-width: 768px */
+/* MIN-width: 992px */
+/* MIN-width: 1200px */
+/* ############################# */
+/*          HTML5 Boy */
+/* ############################# */
+#HTML5Boy {
+  display: block;
+  position: relative;
+  -webkit-background: url("../img/background-squares.jpg") repeat-y center;
+  -moz-background: url("../img/background-squares.jpg") repeat-y center;
+  -o-background: url("../img/background-squares.jpg") repeat-y center;
+  background: url("../img/background-squares.jpg") repeat-y center;
+  pie-background: url("/img/background-squares.jpg") repeat-y center;
+  background-size: auto; }
+  #HTML5Boy * {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: default; }
+  #HTML5Boy ::selection {
+    background: #c4c4c4; }
+  #HTML5Boy ::-moz-selection {
+    background: #c4c4c4; }
+  #HTML5Boy .conteneur-gameboy {
+    overflow: hidden;
+    padding: 0; }
+  #HTML5Boy div.gameboy {
+    display: block;
+    position: relative;
+    width: 312px;
+    height: 317px;
+    margin: 50px auto 0;
+    -webkit-background: url("../img/html5boy/details-top.jpg") 50% no-repeat #b7b6b4;
+    -moz-background: url("../img/html5boy/details-top.jpg") 50% no-repeat #b7b6b4;
+    -o-background: url("../img/html5boy/details-top.jpg") 50% no-repeat #b7b6b4;
+    background: url("../img/html5boy/details-top.jpg") 50% no-repeat #b7b6b4;
+    pie-background: url("/img/html5boy/details-top.jpg") 50% no-repeat #b7b6b4;
+    background-size: 100%;
+    background-position-x: center;
+    background-position-y: top;
+    -webkit-border-radius: 8px 8px 0 0;
+    -moz-border-radius: 8px 8px 0 0;
+    -ms-border-radius: 8px 8px 0 0;
+    border-radius: 8px 8px 0 0;
+    -webkit-box-shadow: 0 0 20px black;
+    -moz-box-shadow: 0 0 20px black;
+    box-shadow: 0 0 20px black;
+    behavior: url("./css/css3pie/PIE.htc"); }
+    #HTML5Boy div.gameboy .contour-ecran {
+      display: block;
+      position: relative;
+      width: 280px;
+      height: 216px;
+      margin: 0 16px;
+      -webkit-border-radius: 14px 14px 55px 14px;
+      -moz-border-radius: 14px 14px 55px 14px;
+      -ms-border-radius: 14px 14px 55px 14px;
+      border-radius: 14px 14px 55px 14px;
+      behavior: url("./css/css3pie/PIE.htc");
+      top: 45px;
+      background-color: #52515f; }
+      #HTML5Boy div.gameboy .contour-ecran .deco-contour {
+        display: block;
+        position: relative;
+        margin: 0 auto;
+        top: 5px; }
+      #HTML5Boy div.gameboy .contour-ecran .ecran-vert {
+        display: block;
+        position: relative;
+        width: 190px;
+        height: 168px;
+        top: 12px;
+        margin: 0 auto;
+        border: 3px solid black;
+        background-color: #506418; }
+        #HTML5Boy div.gameboy .contour-ecran .ecran-vert .sous-ecran {
+          display: block;
+          position: relative;
+          width: 160px;
+          height: 144px;
+          margin: 9px auto 0;
+          background-color: #9bbc0f; }
+      #HTML5Boy div.gameboy .contour-ecran .indicateur-batteries {
+        display: block;
+        position: absolute;
+        width: 36px;
+        height: 38px;
+        top: 56px;
+        left: 6px; }
+        #HTML5Boy div.gameboy .contour-ecran .indicateur-batteries > img {
+          display: block;
+          position: relative;
+          top: 0;
+          left: 4px; }
+        #HTML5Boy div.gameboy .contour-ecran .indicateur-batteries > span {
+          display: block;
+          position: absolute;
+          bottom: 0;
+          font-size: 8px;
+          color: white; }
+
+/* MAX-width: 767px */
+/* MIN-width: 768px */
+/* MIN-width: 992px */
+/* MIN-width: 1200px */
+/* ############################# */
+/*        Programmation */
+/* ############################# */
+#Programmation {
+  display: block;
+  position: relative;
+  background: #ad3232; }
+  #Programmation ::selection {
+    background: #852727; }
+  #Programmation ::-moz-selection {
+    background: #852727; }
+  html.lt-ie9 #Programmation .container {
+    padding-bottom: 40px; }
+  #Programmation .item-lang-prog {
+    display: block;
+    position: relative;
+    height: auto; }
+    #Programmation .item-lang-prog:first-child {
+      margin: 0; }
+    #Programmation .item-lang-prog:nth-child(2n) {
+      margin: 0 0 30px; }
+    #Programmation .item-lang-prog:nth-child(2n+1) {
+      margin: 0 0 30px; }
+    #Programmation .item-lang-prog:last-child {
+      margin: 0 0 40px; }
+    #Programmation .item-lang-prog * {
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      cursor: default; }
+    #Programmation .item-lang-prog .inner-box {
+      display: block;
+      position: relative;
+      min-height: 145px;
+      padding: 30px 0;
+      border: 1px solid #e3b9b9;
+      background-color: #ad3232;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      -ms-border-radius: 5px;
+      border-radius: 5px;
+      behavior: url("./css/css3pie/PIE.htc");
+      -webkit-transition: background 0.3s ease-out;
+      -moz-transition: background 0.3s ease-out;
+      -ms-transition: background 0.3s ease-out;
+      -o-transition: background 0.3s ease-out;
+      transition: background 0.3s ease-out; }
+      #Programmation .item-lang-prog .inner-box img {
+        display: block;
+        position: relative;
+        margin: 0 auto; }
+      #Programmation .item-lang-prog .inner-box h2 {
+        margin-top: 15px; }
+    #Programmation .item-lang-prog#Php .inner-box {
+      -webkit-background: url("../img/prog/prog_bg.png") center no-repeat;
+      -moz-background: url("../img/prog/prog_bg.png") center no-repeat;
+      -o-background: url("../img/prog/prog_bg.png") center no-repeat;
+      background: url("../img/prog/prog_bg.png") center no-repeat;
+      pie-background: url("/img/prog/prog_bg.png") center no-repeat; }
+      #Programmation .item-lang-prog#Php .inner-box:hover {
+        background-color: #7a2323; }
+      #Programmation .item-lang-prog#Php .inner-box:active {
+        background-color: #611c1c; }
+    #Programmation .item-lang-prog#Java .inner-box {
+      -webkit-background: url("../img/prog/java_bg.png") center no-repeat;
+      -moz-background: url("../img/prog/java_bg.png") center no-repeat;
+      -o-background: url("../img/prog/java_bg.png") center no-repeat;
+      background: url("../img/prog/java_bg.png") center no-repeat;
+      pie-background: url("/img/prog/java_bg.png") center no-repeat; }
+      #Programmation .item-lang-prog#Java .inner-box:hover {
+        background-color: #7a2323; }
+      #Programmation .item-lang-prog#Java .inner-box:active {
+        background-color: #611c1c; }
+    #Programmation .item-lang-prog#Cobol .inner-box {
+      -webkit-background: url("../img/prog/cobol_bg.png") center no-repeat;
+      -moz-background: url("../img/prog/cobol_bg.png") center no-repeat;
+      -o-background: url("../img/prog/cobol_bg.png") center no-repeat;
+      background: url("../img/prog/cobol_bg.png") center no-repeat;
+      pie-background: url("/img/prog/cobol_bg.png") center no-repeat; }
+      #Programmation .item-lang-prog#Cobol .inner-box:hover {
+        background-color: #7a2323; }
+      #Programmation .item-lang-prog#Cobol .inner-box:active {
+        background-color: #611c1c; }
+    #Programmation .item-lang-prog#Ruby .inner-box {
+      -webkit-background: url("../img/prog/ruby_bg.png") center no-repeat;
+      -moz-background: url("../img/prog/ruby_bg.png") center no-repeat;
+      -o-background: url("../img/prog/ruby_bg.png") center no-repeat;
+      background: url("../img/prog/ruby_bg.png") center no-repeat;
+      pie-background: url("/img/prog/ruby_bg.png") center no-repeat; }
+      #Programmation .item-lang-prog#Ruby .inner-box:hover {
+        background-color: #7a2323; }
+      #Programmation .item-lang-prog#Ruby .inner-box:active {
+        background-color: #611c1c; }
+
+/* MAX-width: 767px */
+/* MIN-width: 768px */
+/* MIN-width: 992px */
+/* MIN-width: 1200px */
+/* ############################# */
+/*          Design */
+/* ############################# */
+#Design {
+  display: block;
+  position: relative;
+  -webkit-background: #32ad58;
+  -moz-background: #32ad58;
+  -o-background: #32ad58;
+  background: #32ad58;
+  pie-background: #32ad58; }
+  #Design ::selection {
+    background: #278544; }
+  #Design ::-moz-selection {
+    background: #278544; }
+  #Design .row-items-design {
+    display: block;
+    position: relative; }
+  #Design h3 {
+    margin: 10px 0 50px 0; }
+  #Design .item_design {
+    perspective: 1000px;
+    -moz-perspective: 1000px;
+    -webkit-perspective: 1000px;
+    -webkit-font-smoothing: none; }
+  #Design .contour-blanc {
+    display: block;
+    position: relative;
+    width: 220px;
+    height: 220px;
+    padding: 7px 0;
+    background-color: #fff;
+    margin: 0 auto; }
+    #Design .contour-blanc .thumb {
+      display: block;
+      position: static;
+      margin: 0 auto; }
+    #Design .contour-blanc .label-flotant {
+      display: block;
+      position: absolute;
+      width: auto;
+      padding: 5px 5px 3px;
+      top: 25px;
+      right: -22px;
+      font-family: "Nokia", "Lucida Console", monospace;
+      font-size: 8px;
+      color: white; }
+      #Design .contour-blanc .label-flotant:after {
+        display: block;
+        position: absolute;
+        content: "";
+        right: 0;
+        bottom: -22px;
+        width: 0;
+        height: 0;
+        border-top: 22px solid;
+        border-right: 22px solid transparent; }
+      #Design .contour-blanc .label-flotant.label-bleu {
+        background-color: #3b6bcc; }
+        #Design .contour-blanc .label-flotant.label-bleu:after {
+          border-top-color: #274b94; }
+      #Design .contour-blanc .label-flotant.label-rouge {
+        background-color: #cc3b3b; }
+        #Design .contour-blanc .label-flotant.label-rouge:after {
+          border-top-color: #942727; }
+      #Design .contour-blanc .label-flotant.label-mauve {
+        background-color: #6e3bcc; }
+        #Design .contour-blanc .label-flotant.label-mauve:after {
+          border-top-color: #4d2794; }
+      #Design .contour-blanc .label-flotant.label-jaune {
+        background-color: #ffcb34;
+        color: #222; }
+        #Design .contour-blanc .label-flotant.label-jaune:after {
+          border-top-color: #e7ab00; }
+  #Design .description-pixel {
+    display: block;
+    position: relative;
+    height: auto;
+    padding: 15px;
+    background-color: #333;
+    color: white;
+    font-family: "Nokia", "Lucida Console", monospace;
+    font-size: 16px; }
+    #Design .description-pixel a {
+      color: white;
+      border-bottom: 2px solid white; }
+      #Design .description-pixel a:hover {
+        color: #88b4bb;
+        text-decoration: none;
+        border-bottom-color: #88b4bb; }
+  #Design .onglet-unfold {
+    display: block;
+    position: relative;
+    width: 220px;
+    height: 40px;
+    background-color: #ddd;
+    margin: 0 auto;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    transition: transform 0.1s linear, background-color 0.1s linear;
+    -o-transition: transform 0.1s linear, background-color 0.1s linear;
+    -ms-transition: transform 0.1s linear, background-color 0.1s linear;
+    -moz-transition: transform 0.1s linear, background-color 0.1s linear;
+    -webkit-transition: transform 0.1s linear, background-color 0.1s linear;
+    transform: rotateX(0deg);
+    -o-transform: rotateX(0deg);
+    -moz-transform: rotateX(0deg);
+    -webkit-transform: rotateX(0deg);
+    transform-origin: 0% 0%;
+    -o-transform-origin: 0% 0%;
+    -ms-transform-origin: 0% 0%;
+    -moz-transform-origin: 0% 0%;
+    -webkit-transform-origin: 0% 0%; }
+    #Design .onglet-unfold:hover {
+      transform: rotateX(-33deg) scaleY(1.5);
+      -o-transform: rotateX(-33deg) scaleY(1.5);
+      -ms-transform: rotateX(-33deg) scaleY(1.5);
+      -moz-transform: rotateX(-33deg) scaleY(1.5);
+      -webkit-transform: rotateX(-33deg) scaleY(1.5);
+      background-color: #ccc; }
+    #Design .onglet-unfold img {
+      display: block;
+      position: relative;
+      padding-top: 11px;
+      margin: 0 auto; }
+
+/* MAX-width: 767px */
+/* MIN-width: 768px */
+/* MIN-width: 992px */
+/* MIN-width: 1200px */
+/* ############################# */
+/*           Contact */
+/* ############################# */
+#Contact {
+  display: block;
+  position: relative;
+  font-family: "Cabin", Arial, sans-serif;
+  -webkit-background: #327aad;
+  -moz-background: #327aad;
+  -o-background: #327aad;
+  background: #327aad;
+  pie-background: #327aad;
+  /* Container-Fluid */ }
+  #Contact::selection {
+    -webkit-background: #275e85;
+    -moz-background: #275e85;
+    -o-background: #275e85;
+    background: #275e85;
+    pie-background: #275e85;
+    color: white; }
+  #Contact ::-moz-selection {
+    -webkit-background: #275e85;
+    -moz-background: #275e85;
+    -o-background: #275e85;
+    background: #275e85;
+    pie-background: #275e85;
+    color: white; }
+  #Contact .formulaire-contact input, #Contact .formulaire-contact textarea {
+    display: block;
+    position: relative;
+    width: 100%;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: none;
+    font-size: 18px;
+    behavior: url("./css/css3pie/PIE.htc"); }
+    #Contact .formulaire-contact input::-webkit-input-placeholder, #Contact .formulaire-contact textarea::-webkit-input-placeholder {
+      color: #999; }
+    #Contact .formulaire-contact input:-ms-input-placeholder, #Contact .formulaire-contact textarea:-ms-input-placeholder {
+      color: #999; }
+    #Contact .formulaire-contact input:-moz-placeholder, #Contact .formulaire-contact textarea:-moz-placeholder {
+      color: #999; }
+    #Contact .formulaire-contact input::-moz-placeholder, #Contact .formulaire-contact textarea::-moz-placeholder {
+      color: #999; }
+  #Contact .formulaire-contact input[type="text"], #Contact .formulaire-contact input[type="email"] {
+    display: block;
+    position: relative;
+    padding: 5px 0 3px 15px;
+    line-height: 1.5;
+    -webkit-background: #fff;
+    -moz-background: #fff;
+    -o-background: #fff;
+    background: #fff;
+    pie-background: #fff; }
+  #Contact .formulaire-contact input[type="submit"] {
+    position: absolute;
+    -webkit-background: #419ee0;
+    -moz-background: #419ee0;
+    -o-background: #419ee0;
+    background: #419ee0;
+    pie-background: #419ee0;
+    color: #23567a;
+    border: 1px solid #23567a;
+    border-bottom-width: 5px;
+    margin-bottom: 0;
+    margin-top: -5px;
+    transition: border-width 0.05s ease-out, margin-top 0.05s ease-out, background 0.1s ease-out; }
+    html.cssanimations #Contact .formulaire-contact input[type="submit"]:hover {
+      margin-top: -3px;
+      border-width: 1px 1px 3px 1px; }
+    html.cssanimations #Contact .formulaire-contact input[type="submit"]:active, html.cssanimations #Contact .formulaire-contact input[type="submit"]:focus {
+      margin-top: -1px;
+      border-width: 1px 1px 1px 1px; }
+  #Contact .formulaire-contact textarea {
+    padding: 15px; }
+  #Contact .conteneur-submit {
+    display: block;
+    position: relative;
+    height: 40px; }
+  #Contact .soustitre-rs {
+    color: #fff;
+    font-size: 20px;
+    margin: 60px auto 30px auto;
+    text-align: center; }
+  #Contact .barre-rs {
+    display: block;
+    position: relative;
+    background-color: #2b6894; }
+    #Contact .barre-rs .reseaux-sociaux {
+      display: block;
+      position: relative;
+      text-align: center;
+      padding: 0; }
+      #Contact .barre-rs .reseaux-sociaux .rs {
+        display: inline-block;
+        position: relative;
+        height: 69px;
+        width: 64px;
+        background: url("../img/contact/spritesheet.jpg") no-repeat;
+        top: 0;
+        transition: height 0.1s ease-out, margin-top 0.1s ease-out; }
+        #Contact .barre-rs .reseaux-sociaux .rs.rs-facebook {
+          background-position: 0 0px;
+          background-position-x: 0px;
+          background-position-y: 0;
+          -ms-background-position-x: 0px;
+          -ms-background-position-y: 0; }
+          #Contact .barre-rs .reseaux-sociaux .rs.rs-facebook:hover {
+            background-position: -64px 0px;
+            background-position-x: 0px;
+            background-position-y: -64px;
+            -ms-background-position-x: 0px;
+            -ms-background-position-y: -64px; }
+        #Contact .barre-rs .reseaux-sociaux .rs.rs-twitter {
+          background-position: 0 -64px;
+          background-position-x: -64px;
+          background-position-y: 0;
+          -ms-background-position-x: -64px;
+          -ms-background-position-y: 0; }
+          #Contact .barre-rs .reseaux-sociaux .rs.rs-twitter:hover {
+            background-position: -64px -64px;
+            background-position-x: -64px;
+            background-position-y: -64px;
+            -ms-background-position-x: -64px;
+            -ms-background-position-y: -64px; }
+        #Contact .barre-rs .reseaux-sociaux .rs.rs-linkedin {
+          background-position: 0 -128px;
+          background-position-x: -128px;
+          background-position-y: 0;
+          -ms-background-position-x: -128px;
+          -ms-background-position-y: 0; }
+          #Contact .barre-rs .reseaux-sociaux .rs.rs-linkedin:hover {
+            background-position: -64px -128px;
+            background-position-x: -128px;
+            background-position-y: -64px;
+            -ms-background-position-x: -128px;
+            -ms-background-position-y: -64px; }
+        #Contact .barre-rs .reseaux-sociaux .rs.rs-steam {
+          background-position: 0 -192px;
+          background-position-x: -192px;
+          background-position-y: 0;
+          -ms-background-position-x: -192px;
+          -ms-background-position-y: 0; }
+          #Contact .barre-rs .reseaux-sociaux .rs.rs-steam:hover {
+            background-position: -64px -192px;
+            background-position-x: -192px;
+            background-position-y: -64px;
+            -ms-background-position-x: -192px;
+            -ms-background-position-y: -64px; }
+        #Contact .barre-rs .reseaux-sociaux .rs.rs-github {
+          background-position: 0 -256px;
+          background-position-x: -256px;
+          background-position-y: 0;
+          -ms-background-position-x: -256px;
+          -ms-background-position-y: 0; }
+          #Contact .barre-rs .reseaux-sociaux .rs.rs-github:hover {
+            background-position: -64px -256px;
+            background-position-x: -256px;
+            background-position-y: -64px;
+            -ms-background-position-x: -256px;
+            -ms-background-position-y: -64px; }
+        #Contact .barre-rs .reseaux-sociaux .rs:hover {
+          height: 64px; }
+
+/* MAX-width: 767px */
+/* MIN-width: 768px */
+/* MIN-width: 992px */
+/* MIN-width: 1200px */
+/* ############################# */
+/*           Footer */
+/* ############################# */
+footer {
+  display: block;
+  position: relative;
+  background-color: #333;
+  color: #ddd; }
+  footer .conteneur-centre {
+    width: 320px;
+    height: auto;
+    margin: 0 auto; }
+    footer .conteneur-centre p {
+      font-family: "Cabin", Arial, sans-serif;
+      font-size: 16px;
+      margin: 0 0 15px 15px;
+      padding: 30px 0 0; }
+    footer .conteneur-centre img {
+      margin: 0 40px 30px; }
+
+/* MAX-width: 767px */
+/* MIN-width: 768px */
+/* MIN-width: 992px */
+/* MIN-width: 1200px */
+body {
+  -webkit-backface-visibility: hidden; }
+
+/* ---------- ALL MEDIA QUERIES
+ * Une fa├ºon brillante que j'ai eu pour faire les media queries:
+ * Les mettre dans des mixins en syntaxe raccourcie.
+ */
+@media(max-width: 767px) {
+  header#MainNavbar .navbar {
+    min-height: 30px;
+    color: white; }
+  header#MainNavbar .navbar-nav li a {
+    padding: 8px; }
+  header#MainNavbar .navbar-nav > li > a {
+    line-height: 1; }
+  header#MainNavbar .navbar-brand {
+    font-size: 18px;
+    padding: 5px 15px 0;
+    height: auto; }
+  header#MainNavbar button.navbar-toggle {
+    border: none;
+    padding: 8px 0;
+    margin: 0; }
+
+  section#HTML5Boy {
+    margin-top: 30px; }
+
+  section#Programmation .item-lang-prog {
+    /* TODO: Mettre du padding ├á la place des heights */ }
+
+  section#Design .row-items-design > div {
+    margin-bottom: 50px; } }
+@media(min-width: 768px) {
+  header#MainNavbar .navbar-nav > li > a {
+    padding-top: 18px;
+    padding-bottom: 15px; }
+
+  section#HTML5Boy {
+    margin-top: 50px;
+    height: 367px; }
+
+  section#Programmation .item-lang-prog#Php .inner-box {
+    -webkit-background-size: 200% auto;
+    -moz-background-size: 200% auto;
+    -ms-background-size: 200% auto;
+    -o-background-size: 200% auto;
+    background-size: 200% auto;
+    -webkit-transition: background 0.3s ease-out;
+    -moz-transition: background 0.3s ease-out;
+    -ms-transition: background 0.3s ease-out;
+    -o-transition: background 0.3s ease-out;
+    transition: background 0.3s ease-out; }
+    section#Programmation .item-lang-prog#Php .inner-box:hover {
+      -webkit-background-size: 90% auto;
+      -moz-background-size: 90% auto;
+      -ms-background-size: 90% auto;
+      -o-background-size: 90% auto;
+      background-size: 90% auto; }
+  section#Programmation .item-lang-prog#Java .inner-box {
+    -webkit-background-size: 100% auto;
+    -moz-background-size: 100% auto;
+    -ms-background-size: 100% auto;
+    -o-background-size: 100% auto;
+    background-size: 100% auto;
+    -webkit-transition: background 0.3s ease-out;
+    -moz-transition: background 0.3s ease-out;
+    -ms-transition: background 0.3s ease-out;
+    -o-transition: background 0.3s ease-out;
+    transition: background 0.3s ease-out; }
+    section#Programmation .item-lang-prog#Java .inner-box:hover {
+      -webkit-background-size: 50% auto;
+      -moz-background-size: 50% auto;
+      -ms-background-size: 50% auto;
+      -o-background-size: 50% auto;
+      background-size: 50% auto; }
+  section#Programmation .item-lang-prog#Cobol .inner-box {
+    -webkit-background-size: 100% auto;
+    -moz-background-size: 100% auto;
+    -ms-background-size: 100% auto;
+    -o-background-size: 100% auto;
+    background-size: 100% auto;
+    -webkit-transition: background 0.3s ease-out;
+    -moz-transition: background 0.3s ease-out;
+    -ms-transition: background 0.3s ease-out;
+    -o-transition: background 0.3s ease-out;
+    transition: background 0.3s ease-out; }
+    section#Programmation .item-lang-prog#Cobol .inner-box:hover {
+      -webkit-background-size: 50% auto;
+      -moz-background-size: 50% auto;
+      -ms-background-size: 50% auto;
+      -o-background-size: 50% auto;
+      background-size: 50% auto; }
+  section#Programmation .item-lang-prog#Ruby .inner-box {
+    -webkit-background-size: 100% auto;
+    -moz-background-size: 100% auto;
+    -ms-background-size: 100% auto;
+    -o-background-size: 100% auto;
+    background-size: 100% auto;
+    -webkit-transition: background 0.3s ease-out;
+    -moz-transition: background 0.3s ease-out;
+    -ms-transition: background 0.3s ease-out;
+    -o-transition: background 0.3s ease-out;
+    transition: background 0.3s ease-out; }
+    section#Programmation .item-lang-prog#Ruby .inner-box:hover {
+      -webkit-background-size: 50% auto;
+      -moz-background-size: 50% auto;
+      -ms-background-size: 50% auto;
+      -o-background-size: 50% auto;
+      background-size: 50% auto; }
+
+  section#Design .row-items-design > div {
+    margin-bottom: 50px; } }
+@media(min-width: 992px) {
+  header#MainNavbar .full-width {
+    position: relative; }
+  header#MainNavbar .navbar-brand {
+    font-size: 30px;
+    padding-top: 10px;
+    line-height: 1; }
+
+  section#Design .row-items-design > div {
+    margin-bottom: 25px; } }
+@media(min-width: 1200px) {}
+/* ==========================================================================
+ * Helper classes
+ * ========================================================================== */
+/* Image replacement */
+.ir {
+  background-color: transparent;
+  border: 0;
+  overflow: hidden;
+  /* IE 6/7 fallback */
+  *text-indent: -9999px; }
+  .ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%; }
+
+/* Hide from both screenreaders and browsers: h5bp.com/u */
+.hidden {
+  display: none !important;
+  visibility: hidden; }
+
+/* Hide only visually, but have it available for screenreaders: h5bp.com/v */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
+  .visuallyhidden.focusable:active, .visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto; }
+
+/* Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p */
+/* Hide visually and from screenreaders, but maintain layout */
+.invisible {
+  visibility: hidden; }
+
+/* Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements. */
+.clearfix {
+  /* 2 */
+  zoom: 1; }
+  .clearfix:before {
+    content: " ";
+    /* 1 */
+    display: table; }
+  .clearfix:after {
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */
+    clear: both; }
+
+/*# sourceMappingURL=main.css.map */

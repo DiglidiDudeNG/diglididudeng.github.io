@@ -1,0 +1,16 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Félix Dion Robiodoux -- Lead Developer -- @LastHoxtonBendr
+
+# THANKS
+
+    My hands, for suffering in order to make this website.
+
+# TECHNOLOGY COLOPHON
+
+    HTML5, CSS3
+    Normalize.css, jQuery, Modernizr, CSS3pie
+    SVG

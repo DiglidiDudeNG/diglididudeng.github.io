@@ -1,0 +1,466 @@
+#profile-background {
+	display: block;
+	position: relative;
+	width: 100%;
+	margin: 0 auto;
+	height: auto;
+	min-height: auto;
+	background: #eee;
+
+	.contenu-960 {
+		width: 960px;
+		margin: 0 auto;
+		background: #fff;
+		min-height: 500px;
+		height: auto;
+
+		.profile-section {
+			display: inline-block;
+			position: relative;
+			width: 940px;
+			height: auto;
+			padding: 0 0;
+			margin: 50px 10px 0 10px;
+
+			.profile-nameflair {
+				display: inline-block;
+				position: relative;
+				height: 40px;
+				float: left;
+				z-index: 1;
+				.nameflair-content {
+					display: table-cell;
+					position: relative;
+					vertical-align: middle;
+					height: 30px;
+					margin: 0;
+					padding: 6px 0 6px 6px;
+					z-index: 1;
+					background-color: #63c;
+
+					img {
+						display: inline-block;
+						position: relative;
+						float: left;
+						margin: 0;
+						padding: 0;
+					}
+					h1.txtUsername {
+						display: inline-block;
+						position: relative;
+						float: left;
+
+						margin: 0 -8px 0 0;
+						padding: 1px 0 0 6px;
+
+						font-family: "Roboto", sans-serif;
+						font-size: 18px;
+						font-weight: 500;
+						color: white;
+					}
+				}
+				.nameflair-decoration {
+					display: table-cell;
+					position: relative;
+
+					width:20px;
+					height:40px;
+					z-index: 0;
+
+					border:1px none transparent;
+					background: #63c;
+					border-radius: 0 0 120px 0;
+				}
+			}
+			.profile-sideflair {
+				display: inline-block;
+				position: relative;
+				height: 40px;
+				z-index: 0;
+				margin: 0;
+				padding: 0 0 0 0;
+
+				.sideflair-content {
+					display: inline-block;
+					position: relative;
+					width: auto;
+					height: 30px;
+					margin: 0;
+					padding: 0;
+					//background-color: white;
+					font-family: "Roboto Condensed", sans-serif;
+
+					h2 {
+						display: inline-block;
+						position: relative;
+
+						margin: 0;
+						padding: 0 8px 0 6px;
+						width: auto;
+						height: 40px;
+
+						font-size: 16px;
+						font-weight: 300;
+						font-style: italic;
+
+						color: #333;
+					}
+					h3 {
+						display: inline-block;
+						position: relative;
+						min-width: 10px;
+						margin: 0;
+						padding: 3px 5px;
+
+						line-height: 1;
+						text-align: center;
+						font-style: normal;
+						font-weight: 1000;
+						font-size: 16px;
+
+						color: #ddd;
+						background-color: #333;
+						border-radius: 5px;
+					}
+				}
+			}
+			.profile-socialflair {
+				display: table-cell;
+				position: relative;
+				float: right;
+
+				div {
+					display: inline-block;
+					position: relative;
+				}
+			}
+
+			.profile-info-gauche {
+				display: block;
+				position: relative;
+				clear: both;
+				float: left;
+				font-family: "Roboto Condensed", sans-serif;
+				.info-avatar {
+					display: block;
+					position: relative;
+					clear: both;
+
+					width: 160px;
+					height: 160px;
+
+					margin: 0 0 0 0;
+					padding: 10px 0;
+
+					img {
+						width: 160px;
+						height: 160px;
+
+						margin: 0 0 0 0;
+						padding: 0 0 0 0;
+						border-radius: 8px;
+					}
+					.info-available {
+						display: inline-block;
+						position: absolute;
+						margin: 0;
+						width: auto;
+						height: auto;
+						background-color: rgba(0, 0, 0, 0.5);
+						padding: 0 0 0 5px;
+
+						border-top-left-radius: 8px;
+
+						img {
+							display: inherit;
+							position: relative;
+							width: 12px;
+							height: 12px;
+							margin-top: 6px;
+							float: left;
+						}
+						span {
+							display: inherit;
+							position: relative;
+							padding: 2px 5px 0 5px;
+							font-size: 14px;
+							color: white;
+							float: left;
+						}
+					}
+				}
+
+				ul.info-boutons {
+					list-style-type: none;
+					padding: 0;
+					margin: 0;
+					li {
+						display: block;
+						position: relative;
+						float: left;
+						margin-right: 4px;
+						padding: 0;
+
+						a, a:visited {
+							display: inline-block;
+							position: relative;
+							padding-top: 2px;
+							margin-bottom: 5px;
+							width: 37px;
+							height: 37px;
+
+							background-color: #999;
+							box-shadow: inset 0 -50px 0 0 rgba(0, 0, 0, 0),
+										inset 0 -5px 0 0 rgba(0, 0, 0, 0.50);
+
+							font-size: 18px;
+							font-weight: 700;
+							text-align: center;
+							color: white;
+							text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.75);
+
+							transition: all 50ms ease-in;
+
+							&#btnP_AddFriend {
+								background-color: #070;
+								//&:hover { background-color: #; }
+								//&:active { background-color: #; }
+							}
+							&#btnP_Follow {
+								background-color: #03f;
+								//&:hover { background-color: #; }
+								//&:active { background-color: #; }
+							}
+							//&#btnP_Message {
+								//background-color: #;
+								//&:hover { background-color: #; }
+								//&:active { background-color: #; }
+							//}
+							&#btnP_Report {
+								background-color: #c00;
+								//&:hover { background-color: #; }
+								//&:active { background-color: #; }
+							}
+
+							&:hover {
+								box-shadow: inset 0 -50px 0 0 rgba(255, 255, 255, 0.3),
+											inset 0px -8px 0px 0px rgba(0, 0, 0, 0.5);
+								margin-top: -2px;
+								height: 39px;
+							}
+							&:active {
+								box-shadow: inset 0 -50px 0 0 rgba(0, 0, 0, 0.4),
+											inset 0 0 0 0 black;
+								background-color: #333;
+								margin-top: 5px;
+								height: 32px;
+							}
+
+							img {
+								margin-top: -1px;
+							}
+						}
+
+						&:last-child {
+							margin-right: 0px;
+						}
+					}
+				}
+			}
+
+			.profile-info-milieu {
+				display: block;
+				position: relative;
+				float: left;
+				font-family: "Roboto", sans-serif;
+				margin: 0 5px;
+				ul {
+					display: block;
+					position: relative;
+					list-style-type: none;
+
+					margin: 10px 5px 10px 5px;
+					padding: 5px 10px 5px 10px;
+
+					box-shadow: inset -1px -1px 0px #999;
+					background-color: #ccc;
+					li {
+						display: block;
+						position: relative;
+						padding: 2px 0 2px 0;
+						font-size: 14px;
+						font-weight: 300;
+						b {
+							display: inline-block;
+							position: relative;
+							width: auto;
+							font-weight: 500;
+							//color: #666;
+						}
+						span, > a {
+							display: inline-block;
+							position: relative;
+							float: right;
+							width: auto;
+							font-weight: 300;
+						}
+						> a {
+							color: #fff;
+							background-color: #aaa;
+							padding: 2px 5px;
+
+							transition: background-color 100ms linear, box-shadow 100ms linear;
+
+							&:hover { background-color: #666; }
+							&:active {
+								background-color: #222;
+							}
+						}
+						&.reliability {
+							span {
+								display: inline-block;
+								padding: 0 2px;
+								color: #fff;
+								&.good { background-color: #3f0; }
+								&.decent { background-color: #cf6; }
+								&.neutral { background-color: #333; }
+								&.wary { background-color: #f60; }
+								&.bad { background-color: #f00; }
+							}
+						}
+						&.title {
+							b {
+								display: inline-block;
+								position: relative;
+								font-size: 18px;
+								color: grey;
+							}
+							a {
+								display: block;
+								width: auto;
+								margin: 0;
+							}
+						}
+					}
+					&.liste-gauche { // Personnal info.
+						float: left;
+						width: 275px;
+						li { width: inherit; }
+					}
+					&.liste-droite { // SpeedRunning-related.
+						float: left;
+						width: 170px;
+						span, a {
+							display: block;
+							position: relative;
+							margin: 0 0 -2px 0;
+							text-align: right;
+						}
+						a {
+							float: none;
+							text-align: center;
+						}
+					}
+					&.liste-bas { // Best Times.
+						clear: left; // MIGHT MAKE SOMETHING BAD
+						height: auto;
+						width: 475px;
+						li { // GAME TITLE: THE GAME            #NUMBER
+							display: block;
+							position: relative;
+							margin: 0 auto;
+							b {
+
+							}
+							span {
+								color: black;
+								font-size: 12px;
+								margin-top: 2px;
+								a {
+									padding: 0;
+									font-size: 15px;
+									text-decoration: underline;
+									background: none;
+									color: #090;
+
+								}
+							}
+						}
+						li:nth-child(2n+1) { // Category         TI:ME.RS
+							margin-top: -4px;
+							b {
+								color: black;
+								font-size: 12px;
+								font-weight: 300;
+							}
+							padding: 0;
+							//margin-bottom: 10px;
+						}
+						li:nth-child(2n) { b { text-shadow: 0px 1px 3px #333; font-size: 18px; } }
+						li:nth-child(2) { b { color: gold; } }
+						li:nth-child(4) { b { color: silver; } }
+						li:nth-child(6) { b { color: /*#f63;*/#805531; } }
+						li:first-child { // PBs
+							margin-top: 0;
+							b {
+								font-size: 18px;
+								color: grey;
+								font-weight: 500;
+							}
+							padding: 4px 0 4px 0;
+							//margin-bottom: 5px;
+						}
+					}
+				}
+			}
+			.profile-info-droite {
+				.profile-info-milieu; // J'emprunte son style par lâchetée.
+				display: block;
+				position: relative;
+				width: 265px;
+				height: 400px;
+
+				padding: 0;
+				margin: 0;
+
+				ul {
+					margin: 10px 0px 10px 0px;
+					li {
+						> p {
+							margin: 8px 0 0 0;
+						}
+						> p:first-of-type {
+							margin-top: 4px;
+						}
+					}
+				}
+			}
+		}
+		.wall-section {
+			display: inline-block;
+			position: relative;
+			width: 940px;
+			height: auto;
+			padding: 0 0;
+			margin: 20px 10px 0 10px;
+			font-family: "Roboto", sans-serif;
+			.wall-title {
+				h1 {
+					display: inline-block;
+					position: relative;
+					width: auto;
+					height: auto;
+					margin: 0 0 0 40px;
+					padding: 0 0 0 0;
+
+					font-size: 28px;
+				}
+			}
+			.wall-content {
+				.status {
+
+				}
+			}
+		}
+	}
+}

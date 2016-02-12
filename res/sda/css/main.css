@@ -1,0 +1,463 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:100,300,500,700,100italic,300italic);
+@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,700,400italic);
+/*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+html,
+button,
+input,
+select,
+textarea {
+  color: #222;
+}
+html {
+  font-size: 1em;
+  line-height: 1.4;
+}
+a,
+a:visited {
+  color: blue;
+}
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+::-moz-selection {
+  background: lightblue;
+  text-shadow: none;
+}
+::selection {
+  background: lightblue;
+  text-shadow: none;
+}
+/*
+ * A better looking default horizontal rule
+ */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+/*
+ * Remove the gap between images, videos, audio and canvas and the bottom of
+ * their containers: h5bp.com/i/440
+ */
+audio,
+canvas,
+img,
+video {
+  vertical-align: middle;
+}
+/*
+ * Remove default fieldset styles.
+ */
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+/*
+ * Allow only vertical resizing of textareas.
+ */
+textarea {
+  resize: vertical;
+}
+/* ==========================================================================
+   Browse Happy prompt
+   ========================================================================== */
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+body {
+  display: block;
+}
+body a,
+body a:hover,
+body a:visited,
+body a:focus {
+  text-decoration: none;
+}
+.base {
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  height: auto;
+}
+.contenu-960 {
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  height: auto;
+  width: 960px;
+}
+.contenu-820 {
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  height: auto;
+  width: 820px;
+  text-align: center;
+}
+.contenu-680 {
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  height: auto;
+  width: 680px;
+}
+.contenu-560 {
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  height: auto;
+  width: 560px;
+}
+header {
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  height: auto;
+  margin-top: 10px;
+  height: 90px;
+}
+header #logo {
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  height: auto;
+  float: left;
+  margin: 0 10px;
+}
+header nav {
+  display: block;
+  position: relative;
+  width: 720px;
+}
+header nav#menu-membre {
+  clear: both;
+  display: inline-block;
+  height: 35px;
+  font-family: "Roboto Condensed";
+}
+header nav#menu-membre .menu-membre-gauche {
+  display: inline-block;
+  position: relative;
+  float: left;
+  margin-top: 13px;
+  font-weight: lighter;
+  font-size: 16px;
+  letter-spacing: 10;
+  line-height: 12px;
+}
+header nav#menu-membre .menu-membre-gauche img {
+  padding: 0;
+  margin-bottom: 4px;
+  margin-right: 7px;
+}
+header nav#menu-membre .menu-membre-gauche a,
+header nav#menu-membre .menu-membre-gauche a:visited {
+  color: #6cf;
+}
+header nav#menu-membre .menu-membre-droite {
+  display: block;
+  position: relative;
+  float: right;
+  margin-right: 10px;
+  font-weight: bold;
+  font-size: 16px;
+  letter-spacing: 10;
+  padding-top: 0;
+  height: 35px;
+}
+header nav#menu-membre .menu-membre-droite ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+header nav#menu-membre .menu-membre-droite ul li {
+  display: block;
+  position: relative;
+  padding-left: 10px;
+  float: left;
+}
+header nav#menu-membre .menu-membre-droite ul li a,
+header nav#menu-membre .menu-membre-droite ul li a:visited {
+  display: inline-block;
+  padding: 10px 9px 15px 9px;
+  background: #3c3;
+  box-shadow: inset 0px -5px 0px 0px #009900;
+  color: white;
+  line-height: 10px;
+  text-shadow: 0px 2px 0px rgba(0, 0, 0, 0.75);
+  transition: all 75ms ease-in;
+}
+header nav#menu-membre .menu-membre-droite ul li a#btnLogIn,
+header nav#menu-membre .menu-membre-droite ul li a:visited#btnLogIn {
+  padding-left: 13px;
+  padding-right: 13px;
+}
+header nav#menu-membre .menu-membre-droite ul li a#btnSignUp,
+header nav#menu-membre .menu-membre-droite ul li a:visited#btnSignUp {
+  padding-left: 9px;
+  padding-right: 8px;
+}
+header nav#menu-membre .menu-membre-droite ul li a:hover,
+header nav#menu-membre .menu-membre-droite ul li a:visited:hover {
+  box-shadow: inset 0px -7px 0px 0px #009900;
+  margin-top: -2px;
+  padding-bottom: 17px;
+}
+header nav#menu-membre .menu-membre-droite ul li a:active,
+header nav#menu-membre .menu-membre-droite ul li a:visited:active {
+  box-shadow: inset 0px 0px 0px 0px #050;
+  margin-top: 5px;
+  background: #3a3;
+  padding-bottom: 10px;
+}
+header nav#menu-bloc {
+  display: inline-block;
+  float: left;
+  width: 720px;
+  height: 45px;
+  margin: 5px 0 0 0;
+  padding: 0 0 0 0;
+  font-family: "Roboto Condensed";
+  font-size: 16px;
+}
+header nav#menu-bloc .menu-bloc-gauche {
+  float: left;
+  list-style-type: none;
+  width: 630px;
+  height: 45px;
+  margin: 0;
+  padding: 0;
+}
+header nav#menu-bloc .menu-bloc-gauche li {
+  display: inline-block;
+  vertical-align: top;
+}
+header nav#menu-bloc .menu-bloc-gauche li a {
+  display: inline-block;
+  position: relative;
+  height: 18px;
+  padding: 15px 0 12px 0;
+  text-align: center;
+  line-height: 10px;
+  background-color: #999;
+  box-shadow: inset 0px -5px 0px 0px rgba(0, 0, 0, 0.33);
+  color: white;
+  text-shadow: 0px 1px 0px #000000;
+  transition: all 75ms linear, box-shadow 75ms linear;
+}
+header nav#menu-bloc .menu-bloc-gauche li a img {
+  display: inline-block;
+  margin-top: -5px;
+}
+header nav#menu-bloc .menu-bloc-gauche li a#btnHome,
+header nav#menu-bloc .menu-bloc-gauche li a#btnNews {
+  width: 60px;
+}
+header nav#menu-bloc .menu-bloc-gauche li a#btnGameList {
+  width: 110px;
+}
+header nav#menu-bloc .menu-bloc-gauche li a#btnKnowledgeBase {
+  width: 120px;
+}
+header nav#menu-bloc .menu-bloc-gauche li a#btnEvents,
+header nav#menu-bloc .menu-bloc-gauche li a#btnContact {
+  width: 70px;
+}
+header nav#menu-bloc .menu-bloc-gauche li a#btnFAQ {
+  width: 60px;
+}
+header nav#menu-bloc .menu-bloc-gauche li a#btnPremium {
+  width: 80px;
+  font-style: italic;
+  font-weight: 500;
+  color: #cc3300;
+  text-shadow: none;
+  background-color: #ffcc33;
+}
+header nav#menu-bloc .menu-bloc-gauche li a#btnPremium:hover {
+  background-color: #ffff33;
+}
+header nav#menu-bloc .menu-bloc-gauche li a#btnPremium:active {
+  background-color: #ffaa33;
+}
+header nav#menu-bloc .menu-bloc-gauche li a:hover {
+  box-shadow: inset 0px -8px 0px 0px rgba(0, 0, 0, 0.22);
+  margin-top: -3px;
+  background-color: #BBB;
+  padding-bottom: 15px;
+}
+header nav#menu-bloc .menu-bloc-gauche li a:active {
+  box-shadow: none;
+  margin-top: 5px;
+  background-color: #666;
+  padding-bottom: 7px;
+}
+header nav#menu-bloc .menu-bloc-gauche li a:focus {
+  outline: 0;
+}
+header nav#menu-bloc .menu-bloc-droite {
+  float: left;
+}
+header nav#menu-bloc .menu-bloc-droite img {
+  float: left;
+  margin: 6px 0 9px 10px;
+}
+main {
+  clear: both;
+  display: block;
+  position: relative;
+}
+main hr {
+  margin: -1px 0 0 0;
+  padding: 0;
+  background-color: black;
+  border: none;
+}
+footer {
+  display: block;
+  position: relative;
+  margin: 50px auto;
+  width: 600px;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
+  color: #666;
+}
+footer .footerTopRow {
+  margin-bottom: 2px;
+}
+footer hr {
+  margin: 0;
+  padding: 0;
+  background-color: #666;
+  border: none;
+}
+footer .footerBottomRow {
+  text-align: justify;
+  width: 600px;
+}
+footer .footerBottomRow a {
+  display: inline-block;
+  position: relative;
+  margin: 0 2em 0 2em;
+}
+footer .footerBottomRow a:first-child {
+  margin: 0 2em 0 0;
+}
+footer .footerBottomRow a:last-child {
+  margin: 0 0 0 2em;
+}
+footer .footerBottomRow a:visited {
+  color: #666;
+}
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+/*
+ * Image replacement
+ */
+.ir {
+  background-color: transparent;
+  border: 0;
+  overflow: hidden;
+  /* IE 6/7 fallback */
+  *text-indent: -9999px;
+}
+.ir:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 150%;
+}
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+.hidden {
+  display: none !important;
+  visibility: hidden;
+}
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+.invisible {
+  visibility: hidden;
+}
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+.clearfix:after {
+  clear: both;
+}
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.clearfix {
+  *zoom: 1;
+}
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */

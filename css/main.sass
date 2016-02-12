@@ -1,0 +1,1014 @@
+/*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+
+/* ==========================================================================
+ * Base styles: opinionated defaults
+ * ==========================================================================
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+
+\::-moz-selection, ::selection
+  background: #b3d4fc
+  text-shadow: none
+
+/*
+ * A better looking default horizontal rule
+
+hr
+  display: block
+  height: 1px
+  border: 0
+  border-top: 1px solid #ccc
+  margin: 1em 0
+  padding: 0
+
+/*
+ * Remove the gap between images, videos, audio and canvas and the bottom of
+ * their containers: h5bp.com/i/440
+
+audio, canvas, img, video
+  vertical-align: middle
+
+/*
+ * Remove default fieldset styles.
+
+fieldset
+  border: 0
+  margin: 0
+  padding: 0
+
+/*
+ * Allow only vertical resizing of textareas.
+
+textarea
+  resize: vertical
+
+/* ==========================================================================
+ * Browse Happy prompt
+ * ==========================================================================
+
+.browsehappy
+  margin: 0.2em 0
+  background: #ccc
+  color: #000
+  padding: 0.2em 0
+
+/* ==========================================================================
+ * Author's custom styles
+ * ==========================================================================
+
+/* Police en Bitmap, pixelisé, basé sur la police des téléphones Nokia. */
+@font-face
+  font-family: "Nokia"
+  src: url("../fonts/nokiafc22/nokiafc22-webfont.eot")
+  src: url("../fonts/nokiafc22/nokiafc22-webfont.eot?#iefix") format('embedded-opentype')
+  src: url("../fonts/nokiafc22/nokiafc22-webfont.woff") format('woff')
+  src: url("../fonts/nokiafc22/nokiafc22-webfont.ttf") format('truetype')
+  src: url("../fonts/nokiafc22/nokiafc22-webfont.svg#nokia_cellphone_fcsmall") format('svg')
+
+/* Cabin et Raleway, depuis Google Fonts */
+@import url(http://fonts.googleapis.com/css?family=Cabin|Raleway:900)
+
+h1, h2, h3
+  display: block
+  position: relative
+  font-family: "Cabin", Arial, sans-serif
+  font-weight: 400
+  color: #ffffff
+  text-align: center
+h1, h3
+  letter-spacing: -0.04em
+h1
+  font-size: 30px
+  margin: 40px 0 0
+h2
+  font-size: 20px
+  margin: 0
+h3
+  font-size: 16px
+  margin: 10px 0 30px 0
+
+.full-width
+  display: block
+  position: relative
+  width: 100%
+
+=no-select()
+  -webkit-touch-callout: none
+  -webkit-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  user-select: none
+  cursor: default
+
+=bg-position-sprite($x, $y)
+  background-position: $y $x
+  background-position-x: $x
+  background-position-y: $y
+  -ms-background-position-x: $x
+  -ms-background-position-y: $y
+
+=sprite($num)
+  $x: -64px * $num
+  +bg-position-sprite($x, 0)
+  &:hover
+    +bg-position-sprite($x, -64px)
+
+$bg-url-pre: "url(\""
+$bg-url-suf: "\")"
+
+=bg( $bg-url, $bg-extras )
+  $propriete: #{$bg-url-pre}#{".."}unquote($bg-url)#{$bg-url-suf} $bg-extras
+  -webkit-background: $propriete
+  -moz-background: $propriete
+  -o-background: $propriete
+  background: $propriete
+  pie-background: #{$bg-url-pre}unquote($bg-url)#{$bg-url-suf} $bg-extras
+
+=bg-url-seul( $bg )
+  +bg($bg, "")
+
+=bg-sans-url( $bg )
+  -webkit-background: $bg
+  -moz-background: $bg
+  -o-background: $bg
+  background: $bg
+  pie-background: $bg
+
+=bg-position( $pos1 )
+  background-position: $pos1
+
+=bg-size( $size-x, $size-y: auto )
+  -webkit-background-size: $size-x $size-y
+  -moz-background-size: $size-x $size-y
+  -ms-background-size: $size-x $size-y
+  -o-background-size: $size-x $size-y
+  background-size: $size-x $size-y
+
+=transition( $transition1, $transition2: null )
+  @if ($transition2 == null)
+    -webkit-transition: $transition1
+    -moz-transition: $transition1
+    -ms-transition: $transition1
+    -o-transition: $transition1
+    transition: $transition1
+  @else
+    -webkit-transition: $transition1, $transition2
+    -moz-transition: $transition1, $transition2
+    -ms-transition: $transition1, $transition2
+    -o-transition: $transition1, $transition2
+    transition: $transition1, $transition2
+
+=override-transition-ie( $states: ( "&:hover" ), $ie: ie8, $overrides: ( "property": value ) )
+  $target_html_class: unquote("no-js")
+
+  /* Checker la classe à sélectionner pour la balise <html>
+  @if (ie == ie7)
+    $target_html_class: unquote(".lt-ie8")
+  @else if ($ie == ie8)
+    $target_html_class: unquote(".lt-ie9")
+  @else if ($ie == ie9)
+    $target_html_class: unquote(".lt-ie10")
+
+  /* Parcourir la liste d'états */
+  @for $i from 0 to length($states)
+    $cur_state: map-get($states, $i)
+    /* Parcourir la liste d'overrides */
+    @for $j from 0 to length($overrides)
+      $cur_override: map-get($overrides, $j)
+      /*  */
+      #{unquote("html#{$target_html_class}")}
+        #{map-get($states, $i)}
+          // TODO me souvenir c'que je voulais faire avec ça
+      #{unquote("html:not(#{$target_html_class}")}
+        #{map-get($states, $i)}
+          // TODO me souvenir c'que je voulais faire avec ça
+
+/* END override-transition() */
+
+/**
+ * Pour activer la compatibilité avec les anciens navigateurs
+ */
+=css3pie
+  behavior: url("./css/css3pie/PIE.htc")
+
+/* #############################
+/*            Navbar
+/* #############################
+#MainNavbar
+  display: block
+  background: #222
+  top: 0
+  left: 0
+  .navbar
+    margin-bottom: 0
+    border: none
+    color: white
+    .icon-bar
+      background: #ffffff
+    .navbar-brand
+      display: block
+      position: relative
+      font-family: "Raleway", sans-serif
+      font-weight: 900
+      letter-spacing: -0.04em
+      margin-left: -15px
+      &:not(.ie8)
+        color: #ffffff
+      span
+        &.blanc
+          color: #ffffff
+        font-style: normal
+        &.i_1
+          color: #ffb9b9
+        &.i_2
+          color: #c2ffba
+        &.i_3
+          color: #bad2ff
+      &:hover
+        &:not(.ie8)
+          color: #ccc
+        span
+          &.blanc
+            color: #ccc
+          &.i_1
+            color: #ff5454
+          &.i_2
+            color: #68ff54
+          &.i_3
+            color: #5490ff
+  .navbar-nav > li > a
+    color: white
+    line-height: 1
+    border-bottom: 3px solid transparent
+    &:hover, &:focus
+      //color: black
+      background: none
+      border-bottom: 3px solid #ff5454
+  .navbar-fixed-top
+    -webkit-backface-visibility: hidden
+    bottom: 0
+
+//
+// BEGIN: Media Queries
+//
+
+/* MAX-width: 767px */
+=navbar---sm_et_xs
+  .navbar
+    min-height: 30px
+    color: white
+  .navbar-nav li a
+    padding: 8px
+  .navbar-nav > li > a
+    line-height: 1
+  .navbar-brand
+    font-size: 18px
+    padding: 5px 15px 0
+    height: auto
+  button.navbar-toggle
+    border: none
+    padding: 8px 0
+    margin: 0
+
+/* MIN-width: 768px */
+=navbar---small
+  //.navbar-nav, .navbar-nav > *
+  //  height: 50px
+  .navbar-nav > li > a
+    padding-top: 18px
+    padding-bottom: 15px
+
+/* MIN-width: 992px */
+=navbar---medium
+  .full-width
+    position: relative
+  .navbar-brand
+    font-size: 30px
+    padding-top: 10px
+    line-height: 1
+
+/* MIN-width: 1200px */
+=navbar---large
+
+
+
+/* #############################
+/*          HTML5 Boy
+/* #############################
+#HTML5Boy
+  display: block
+  position: relative
+  +bg("/img/background-squares.jpg", repeat-y center)
+  background-size: auto
+  & *
+    +no-select
+  ::selection
+    background: darken(#ddd, 10%)
+  ::-moz-selection
+    background: darken(#ddd, 10%)
+  .conteneur-gameboy
+    overflow: hidden
+    padding: 0
+  div.gameboy
+    display: block
+    position: relative
+    width: 312px
+    height: 317px
+    margin: 50px auto 0
+    +bg("/img/html5boy/details-top.jpg", 50% no-repeat #b7b6b4)
+    background-size: 100%
+    background-position-x: center
+    background-position-y: top
+    -webkit-border-radius: 8px 8px 0 0
+    -moz-border-radius: 8px 8px 0 0
+    -ms-border-radius: 8px 8px 0 0
+    border-radius: 8px 8px 0 0
+    -webkit-box-shadow: 0 0 20px black
+    -moz-box-shadow: 0 0 20px black
+    box-shadow: 0 0 20px black
+    +css3pie
+    .contour-ecran
+      display: block
+      position: relative
+      width: 280px
+      height: 216px
+      margin: 0 16px
+      -webkit-border-radius: 14px 14px 55px 14px
+      -moz-border-radius: 14px 14px 55px 14px
+      -ms-border-radius: 14px 14px 55px 14px
+      border-radius: 14px 14px 55px 14px
+      +css3pie
+      top: 45px
+      background-color: #52515f
+      .deco-contour
+        display: block
+        position: relative
+        margin: 0 auto
+        top: 5px
+      .ecran-vert
+        display: block
+        position: relative
+        width: 190px
+        height: 168px
+        top: 12px
+        margin: 0 auto
+        border: 3px solid black
+        background-color: #506418
+        .sous-ecran
+          display: block
+          position: relative
+          width: 160px
+          height: 144px
+          margin: 9px auto 0
+          background-color: #9bbc0f
+      .indicateur-batteries
+        display: block
+        position: absolute
+        width: 36px
+        height: 38px
+        top: 56px
+        left: 6px
+        > img
+          display: block
+          position: relative
+          top: 0
+          left: 4px
+        > span
+          display: block
+          position: absolute
+          bottom: 0
+          font-size: 8px
+          color: white
+
+
+//
+// BEGIN: Media Queries
+//
+/* MAX-width: 767px */
+=html5boy---sm_et_xs
+  margin-top: 30px
+
+/* MIN-width: 768px */
+=html5boy---small
+  margin-top: 50px
+  height: 367px
+
+/* MIN-width: 992px */
+=html5boy---medium
+
+
+/* MIN-width: 1200px */
+=html5boy---large
+
+
+
+
+/* #############################
+/*        Programmation
+/* #############################
+$bg-php-url: "/img/prog/prog_bg.png"
+$bg-java-url: "/img/prog/java_bg.png"
+$bg-cobol-url: "/img/prog/cobol_bg.png"
+$bg-ruby-url: "/img/prog/ruby_bg.png"
+//$bg-prog-extras: "50% 50% / 100% no-repeat"
+$bg-prog-extras: center no-repeat
+
+=transition-item
+  +transition(background .3s ease-out)
+
+#Programmation
+  display: block
+  position: relative
+  background: #ad3232
+  ::selection
+    background: darken(#ad3232, 10%)
+  ::-moz-selection
+    background: darken(#ad3232, 10%)
+  html.lt-ie9 & .container
+    padding-bottom: 40px
+  .item-lang-prog
+    display: block
+    position: relative
+    height: auto
+    &:first-child
+      margin: 0
+    &:nth-child(2n)
+      margin: 0 0 30px
+    &:nth-child(2n+1)
+      margin: 0 0 30px
+    &:last-child
+      margin: 0 0 40px
+    & *
+      +no-select
+    .inner-box
+      display: block
+      position: relative
+      min-height: 145px
+      padding: 30px 0
+      border: 1px solid #e3b9b9
+      background-color: #ad3232
+      -webkit-border-radius: 5px
+      -moz-border-radius: 5px
+      -ms-border-radius: 5px
+      border-radius: 5px
+      +css3pie
+      +transition-item
+      img
+        display: block
+        position: relative
+        margin: 0 auto
+      h2
+        margin-top: 15px
+    &#Php .inner-box
+      +bg($bg-php-url, $bg-prog-extras)
+      &:hover
+        background-color: #7a2323
+      &:active
+        background-color: #611c1c
+    &#Java .inner-box
+      +bg($bg-java-url, $bg-prog-extras)
+      &:hover
+        background-color: #7a2323
+      &:active
+        background-color: #611c1c
+    &#Cobol .inner-box
+      +bg($bg-cobol-url, $bg-prog-extras)
+      &:hover
+        background-color: #7a2323
+      &:active
+        background-color: #611c1c
+    &#Ruby .inner-box
+      +bg($bg-ruby-url, $bg-prog-extras)
+      &:hover
+        background-color: #7a2323
+      &:active
+        background-color: #611c1c
+
+
+//
+// BEGIN: Media Queries
+//
+/* MAX-width: 767px */
+=prog---sm_et_xs
+  .item-lang-prog
+    /* TODO: Mettre du padding à la place des heights */
+    &#Php .inner-box
+      //height: 128px
+
+    &#Java .inner-box
+      //height: 139px
+
+    &#Cobol .inner-box
+      //height: 135px
+
+    &#Ruby .inner-box
+      //height: 140px
+
+
+/* MIN-width: 768px */
+=prog---small
+  .item-lang-prog
+    &#Php .inner-box
+      +bg-size(200%)
+      +transition-item
+      &:hover
+        +bg-size(90%)
+    &#Java .inner-box
+      +bg-size(100%)
+      +transition-item
+      &:hover
+        +bg-size(50%)
+    &#Cobol .inner-box
+      +bg-size(100%)
+      +transition-item
+      &:hover
+        +bg-size(50%)
+    &#Ruby .inner-box
+      +bg-size(100%)
+      +transition-item
+      &:hover
+        +bg-size(50%)
+
+
+/* MIN-width: 992px */
+=prog---medium
+
+
+/* MIN-width: 1200px */
+=prog---large
+
+
+
+
+/* #############################
+/*          Design
+/* #############################
+=label-coloring($couleur)
+  background-color: $couleur
+  &:after
+    border-top-color: darken($couleur, 15%)
+
+#Design
+  display: block
+  position: relative
+  +bg-sans-url(#32ad58)
+  ::selection
+    background: darken(#32ad58, 10%)
+  ::-moz-selection
+    background: darken(#32ad58, 10%)
+  .row-items-design
+    display: block
+    position: relative
+  h3
+    margin: 10px 0 50px 0
+  .item_design
+    $perspective: 1000px
+    perspective: $perspective
+    -moz-perspective: $perspective
+    -webkit-perspective: $perspective
+    -webkit-font-smoothing: none
+  .contour-blanc
+    display: block
+    position: relative
+    width: 220px
+    height: 220px
+    padding: 7px 0
+    background-color: #fff
+    margin: 0 auto
+    .thumb
+      display: block
+      position: static
+      margin: 0 auto
+    .label-flotant
+      display: block
+      position: absolute
+      width: auto
+      padding: 5px 5px 3px
+      top: 25px
+      right: -22px
+      font-family: "Nokia", "Lucida Console", monospace
+      font-size: 8px
+      color: white
+      &:after
+        display: block
+        position: absolute
+        content: ""
+        right: 0
+        bottom: -22px
+        width: 0
+        height: 0
+        border-top: 22px solid
+        border-right: 22px solid transparent
+      &.label-bleu
+        +label-coloring(#3b6bcc)
+      &.label-rouge
+        +label-coloring(#cc3b3b)
+      &.label-mauve
+        +label-coloring(#6e3bcc)
+      &.label-jaune
+        +label-coloring(#ffcb34)
+        color: #222
+  .description-pixel
+    display: block
+    position: relative
+    height: auto
+    padding: 15px
+    background-color: #333
+    color: white
+    font-family: "Nokia", "Lucida Console", monospace
+    font-size: 16px
+    //-webkit-font-smoothing: none
+    a
+      color: white
+      border-bottom: 2px solid white
+      &:hover
+        color: #88b4bb
+        text-decoration: none
+        border-bottom-color: #88b4bb
+  .onglet-unfold
+    display: block
+    position: relative
+    width: 220px
+    height: 40px
+    background-color: #ddd
+    margin: 0 auto
+
+    -webkit-transform-style: preserve-3d
+    transform-style: preserve-3d
+
+    $transition3d: transform 0.1s linear, background-color 0.1s linear
+    transition: $transition3d
+    -o-transition: $transition3d
+    -ms-transition: $transition3d
+    -moz-transition: $transition3d
+    -webkit-transition: $transition3d
+
+    $transform: rotateX(0deg)
+    transform: $transform
+    -o-transform: $transform
+    -moz-transform: $transform
+    -webkit-transform: $transform
+
+    $transform-origin: 0% 0%
+    transform-origin: $transform-origin
+    -o-transform-origin: $transform-origin
+    -ms-transform-origin: $transform-origin
+    -moz-transform-origin: $transform-origin
+    -webkit-transform-origin: $transform-origin
+
+    &:hover
+      $rotateX: -33deg
+      $scale1: 1.5
+      $transform-hover: rotateX($rotateX) scaleY($scale1)
+      transform: $transform-hover
+      -o-transform: $transform-hover
+      -ms-transform: $transform-hover
+      -moz-transform: $transform-hover
+      -webkit-transform: $transform-hover
+      background-color: #ccc
+    img
+      display: block
+      position: relative
+      padding-top: 11px
+      margin: 0 auto
+
+//
+// BEGIN: Media Queries
+//
+/* MAX-width: 767px */
+=design---sm_et_xs
+  .row-items-design > div
+    margin-bottom: 50px
+
+/* MIN-width: 768px */
+=design---small
+  .row-items-design > div
+    margin-bottom: 50px
+
+/* MIN-width: 992px */
+=design---medium
+  .row-items-design > div
+    margin-bottom: 25px
+/* MIN-width: 1200px */
+=design---large
+
+
+
+/* #############################
+/*           Contact
+/* #############################
+#Contact
+  display: block
+  position: relative
+  font-family: "Cabin", Arial, sans-serif
+  +bg-sans-url(#327aad)
+  &::selection
+    +bg-sans-url(darken(#327aad, 10%))
+    color: white
+  ::-moz-selection
+    +bg-sans-url(darken(#327aad, 10%))
+    color: white
+  .formulaire-contact
+    input, textarea
+      display: block
+      position: relative
+      width: 100%
+      margin-bottom: 15px
+      border-radius: 5px
+      border: none
+      font-size: 18px
+      +css3pie
+      &::-webkit-input-placeholder
+        color: #999
+      &:-ms-input-placeholder
+        color: #999
+      &:-moz-placeholder
+        color: #999
+      &::-moz-placeholder
+        color: #999
+    input
+      &[type="text"], &[type="email"]
+        display: block
+        position: relative
+        padding: 5px 0 3px 15px
+        line-height: 1.5
+        +bg-sans-url(#fff)
+      &[type="submit"]
+        position: absolute
+        +bg-sans-url(#419ee0)
+        color: #23567a
+        border: 1px solid #23567a
+        border-bottom-width: 5px
+        margin-bottom: 0
+        margin-top: -5px
+        transition: border-width 0.05s ease-out, margin-top 0.05s ease-out, background 0.1s ease-out
+        html.cssanimations &
+          &:hover
+            margin-top: -3px
+            border-width: 1px 1px 3px 1px
+          &:active, &:focus
+            margin-top: -1px
+            border-width: 1px 1px 1px 1px
+
+    textarea
+      padding: 15px
+  .conteneur-submit
+    display: block
+    position: relative
+    height: 40px
+  .soustitre-rs
+    color: #fff
+    font-size: 20px
+    margin: 60px auto 30px auto
+    text-align: center
+  /* Container-Fluid */
+  .barre-rs
+    display: block
+    position: relative
+    background-color: #2b6894
+    .reseaux-sociaux
+      display: block
+      position: relative
+      text-align: center
+      padding: 0
+      .rs
+        display: inline-block
+        position: relative
+        height: 69px
+        width: 64px
+        background: url("../img/contact/spritesheet.jpg") no-repeat
+        //zoom: 2
+        top: 0
+        transition: height 0.1s ease-out, margin-top 0.1s ease-out
+        &.rs-facebook
+          +sprite(0) /* 0px */
+        &.rs-twitter
+          +sprite(1) /* -64px */
+        &.rs-linkedin
+          +sprite(2) /* -128px */
+        &.rs-steam
+          +sprite(3) /* -192px */
+        &.rs-github
+          +sprite(4) /* -256px */
+        &:hover
+          height: 64px
+
+
+
+
+//
+// BEGIN: Media Queries
+//
+/* MAX-width: 767px */
+=contact---sm_et_xs
+
+
+/* MIN-width: 768px */
+=contact---small
+
+
+/* MIN-width: 992px */
+=contact---medium
+
+
+/* MIN-width: 1200px */
+=contact---large
+
+
+
+
+
+/* #############################
+/*           Footer
+/* #############################
+footer
+  display: block
+  position: relative
+  background-color: #333
+  color: #ddd
+  .conteneur-centre
+    width: 320px
+    height: auto
+    margin: 0 auto
+    p
+      font-family: "Cabin", Arial, sans-serif
+      font-size: 16px
+      margin: 0 0 15px 15px
+      padding: 30px 0 0
+    img
+      margin: 0 40px 30px
+
+
+
+//
+// BEGIN: Media Queries
+//
+/* MAX-width: 767px */
+=footer---sm_et_xs
+
+
+/* MIN-width: 768px */
+=footer---small
+
+
+/* MIN-width: 992px */
+=footer---medium
+
+
+/* MIN-width: 1200px */
+=footer---large
+
+
+
+body
+  -webkit-backface-visibility: hidden
+
+/* ---------- ALL MEDIA QUERIES
+ * Une façon brillante que j'ai eu pour faire les media queries:
+ * Les mettre dans des mixins en syntaxe raccourcie.
+ */
+@media(max-width: 767px)
+  header#MainNavbar
+    +navbar---sm_et_xs
+  section#HTML5Boy
+    +html5boy---sm_et_xs
+  section#Programmation
+    +prog---sm_et_xs
+  section#Design
+    +design---sm_et_xs
+  section#Contact
+    +contact---sm_et_xs
+  footer
+    +footer---sm_et_xs
+
+@media(min-width: 768px)
+  header#MainNavbar
+    +navbar---small
+  section#HTML5Boy
+    +html5boy---small
+  section#Programmation
+    +prog---small
+  section#Design
+    +design---small
+  section#Contact
+    +contact---small
+  footer
+    +footer---small
+
+@media(min-width: 992px)
+  header#MainNavbar
+    +navbar---medium
+  section#HTML5Boy
+    +html5boy---medium
+  section#Programmation
+    +prog---medium
+  section#Design
+    +design---medium
+  section#Contact
+    +contact---medium
+  footer
+    +footer---medium
+
+@media(min-width: 1200px)
+  header#MainNavbar
+    +navbar---large
+  section#HTML5Boy
+    +html5boy---large
+  section#Programmation
+    +prog---large
+  section#Design
+    +design---large
+  section#Contact
+    +contact---large
+  footer
+    +footer---large
+
+/* ==========================================================================
+ * Helper classes
+ * ==========================================================================
+
+/*
+ * Image replacement
+
+.ir
+  background-color: transparent
+  border: 0
+  overflow: hidden
+  /* IE 6/7 fallback
+  *text-indent: -9999px
+  &:before
+    content: ""
+    display: block
+    width: 0
+    height: 150%
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+
+.hidden
+  display: none !important
+  visibility: hidden
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+
+.visuallyhidden
+  border: 0
+  clip: rect(0 0 0 0)
+  height: 1px
+  margin: -1px
+  overflow: hidden
+  padding: 0
+  position: absolute
+  width: 1px
+  &.focusable
+    &:active, &:focus
+      clip: auto
+      height: auto
+      margin: 0
+      overflow: visible
+      position: static
+      width: auto
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+
+.invisible
+  visibility: hidden
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+
+.clearfix
+  &:before
+    content: " "
+    /* 1
+    display: table
+  /* 2
+  &:after
+    content: " "
+    /* 1
+    display: table
+    /* 2
+    clear: both
+  zoom: 1

@@ -1,0 +1,7 @@
+@font-face {
+	font-family: "Nokia";
+	src: url("../fonts/nokiafc22/nokiafc22-webfont.eot");
+	src: url("../fonts/nokiafc22/nokiafc22-webfont.eot?#iefix") format('embedded-opentype');
+	src: url("../fonts/nokiafc22/nokiafc22-webfont.woff") format('woff');
+	src: url("../fonts/nokiafc22/nokiafc22-webfont.ttf") format('truetype');
+}
